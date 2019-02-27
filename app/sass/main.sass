@@ -1,0 +1,594 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: $subaccent
+
+::selection
+	background-color: $accent
+	color: #fff
+
+a
+	outline: none
+html
+    height: 100%
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: #000
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	&:focus
+		text-decoration: none
+	&:active
+		text-decoration: none		
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.clearfix::after
+	content: ""
+	clear: both
+	display: table
+
+.text-center
+	text-align: center
+
+.text-right
+	text-align: right	
+
+.text-left
+	text-align: left
+
+b, strong
+	font-weight: bold
+
+
+// MODAL FORM
+
+.modal-form
+    position: absolute
+    top: 0%
+    left: 50%
+    transform: translate(-50%)
+    background-color: #fff
+    border-radius: 31px
+    width: 390px
+    z-index: 10
+    .modal-close
+        position: absolute
+        right: 0
+        top: 0
+    form
+        input
+            display: block
+            width: 100%
+            border: none
+            border-bottom: 1px solid $subaccent
+            margin-bottom: 15px
+            padding-bottom: 13px
+            text-align: center
+
+
+// FIRST SECTION
+
+
+.home
+    position: relative
+    height: 100vh
+    transition: all .35s ease
+    header
+        position: relative
+        z-index: 2
+        padding: 0 55px
+        transition: all .35s cubic-bezier(0.55, 0, 0.1, 1)
+        &.sticky
+            position: fixed
+            width: 100%
+            background-color: #fff
+            z-index: 1000
+            .logo
+                margin: 20px 0
+            nav
+                margin-top: 48px
+                a
+                    font-family: $bold
+                    color: $caption
+        nav
+            margin-top: 65px
+            ul
+                padding: 0
+                margin: 0
+                list-style: none
+                li
+                    display: inline-block
+                    margin-right: 70px
+                    a
+                        font-size: 12px
+                        text-transform: uppercase
+                        letter-spacing: 1.7px
+                        color: #fff
+                    &:last-child
+                        margin-right: 0
+        .logo
+            margin-top: 31px
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            justify-content: center
+    &__menu-right
+        text-align: right
+    .description
+        position: absolute
+        z-index: 2
+        top: 45%
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 100%
+        width: 60%
+        h1
+            font-family: "PlayfairDisplay Bold", sans-serif
+            font-size: 41px
+            text-shadow: 0 0 99px rgba(0, 0, 0, 0.27)
+            margin-bottom: 50px
+            letter-spacing: 2.05px
+            color: #fff
+        a
+            background-color: $accent
+            font-family: $bold
+            font-size: 12px
+            letter-spacing: 1.68px
+            text-transform: uppercase
+            padding: 18px 35px
+            border-radius: 25px
+            color: #fff
+    .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-image: linear-gradient(to top, #2a1b22 0%, #43403d 100%)
+        opacity: 0.22
+        z-index: 1
+    
+// SECOND SECTION
+
+.more
+    padding: 125px 0
+    border-bottom: 1px solid $subaccent
+    &__left
+        h2
+            font-family: "PlayfairDisplay Bold"
+            font-size: 30px
+            letter-spacing: 1.5px
+            color: $caption
+        p
+            font-family: $semibold, sans-serif
+            font-size: 16px
+            letter-spacing: 1.6px
+            color: $subaccent
+    &__right
+        p
+            font-size: 14px
+            color: $text
+        ul
+            padding: 0
+            margin: 0
+            li
+                font-size: 14px
+                color: $text
+                &:last-child
+                    list-style: none
+                
+// THIRD SECTION
+
+.housing
+    position: relative
+    padding: 108px 15vw
+    &::before 
+        content: ""
+        position: absolute
+        bottom: -118px
+        left: 0
+        width: 866px
+        height: 119px
+        background-color: #fff
+        z-index: 2
+    .description-container
+        max-width: 333px
+        height: 397px
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: center
+        align-items: center
+        div
+            h2
+                font-family: "PlayfairDisplay Bold", sans-serif
+                font-size: 30px
+                letter-spacing: 1.5px
+                color: $caption
+            p
+                font-size: 16px
+                letter-spacing: 1.6px
+                line-height: 20px
+                color: $subaccent
+    .float-image
+        position: relative
+        overflow: hidden
+        z-index: 1
+        a
+            font-family: $bold, sans-serif!important
+            position: absolute 
+            top: 0
+            left: 0
+            background-image: radial-gradient(182px 182px at 1196.2% 976.56%, #ffbcbc 0%, #f57979 100%)
+            font-size: 14px
+            letter-spacing: 2px
+            text-transform: uppercase
+            padding: 45px 30px
+            writing-mode: vertical-rl
+            transform: translateX(-60px)
+            color: #fff
+        &.right
+            transform: translateX(-83px)
+            width: calc(100% + 61px)
+            z-index: 2
+            overflow: unset
+            img
+                height: 754px 
+                width: 102.7%
+                max-width: 103%
+        &.left
+            margin-bottom: 120px
+            img
+                height: 578px
+    .chance
+        font-family: $semibold, sans-serif
+        font-size: 14px
+        letter-spacing: 1.4px
+        float: right
+        margin-top: 21px
+        color: $subaccent
+    .description-list
+        max-width: 350px
+        margin-left: 100px
+        h4
+            position: relative
+            font-family: $semibold, sans-serif
+            font-size: 14px
+            letter-spacing: 1.4px
+            padding-left: 25px
+            color: $subaccent
+            &::before
+                content: ""
+                position: absolute
+                top: 4px
+                left: 0
+                background-color: $subaccent
+                width: 8px
+                height: 8px
+                border-radius: 50%
+        p
+            font-size: 12px
+            letter-spacing: -.3px
+            color: $text
+            
+// FOUR SECTION
+
+.our-company
+    position: relative
+    height: 100vh
+    .content
+        position: absolute
+        background-color: #fff
+        width: 1157px
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        padding: 80px 60px 34px 60px
+        .top-caption
+            margin-bottom: 53px
+            h2
+                font-family: "PlayfairDisplay Bold", sans-serif
+                font-size: 30px
+                letter-spacing: 1.5px  
+                color: $caption 
+            p
+                font-family: $semibold, sans-serif
+                font-size: 16px
+                letter-spacing: 1.6px
+                color: $subaccent
+        .info-area
+            border-radius: 32px
+            padding: 35px 15px 35px 15px
+            transition: all .35s ease-in-out
+            cursor: pointer
+            h4
+                position: relative
+                font-size: 30px
+                letter-spacing: .6px
+                padding-bottom: 7px
+                margin-bottom: 20px
+                white-space: nowrap
+                color: $subaccent
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 27px
+                    height: 3px
+                    opacity: .7
+                    background-color: $subaccent
+            p
+                max-width: 195px
+                &.subcaption
+                    font-family: $semibold, sans-serif
+                    font-size: 14px
+                    letter-spacing: 1.4px
+                    line-height: 24px
+                    margin-bottom: 5px
+                    color: $caption
+                &:last-child
+                    font-size: 12px
+                    letter-spacing: -.3px
+                    line-height: 22px
+                    color: $text
+            &:hover
+                box-shadow: 2px 6px 39px rgba(159, 118, 118, 0.16)
+        .bottom  
+            margin-top: 40px
+            a
+                position: relative
+                background-color: $accent
+                font-family: $bold
+                font-size: 12px
+                letter-spacing: 1.68px
+                text-transform: uppercase
+                padding: 18px 60px
+                -webkit-border-radius: 25px
+                border-radius: 25px
+                color: #fff
+                &::before,
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 196px
+                    height: 3px
+                    background-color: $subaccent
+                    opacity: .5
+                &::before
+                    left: -100%
+                &::after
+                    right: -100%
+                    
+// FIVE SECTION
+
+.us-progress
+    padding: 116px 15vw 123px 15vw 
+    .top-caption
+        h2
+            font-family: "PlayfairDisplay Bold", sans-serif
+            font-size: 30px
+            letter-spacing: 1.5px
+            color: $caption
+        p
+            font-family: $semibold, sans-serif
+            font-size: 16px
+            letter-spacing: 1.6px
+            color: $subaccent
+    .description-area
+        max-width: 280px
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        h2
+            position: relative
+            font-size: 30px
+            letter-spacing: -.6px
+            padding-bottom: 7px
+            color: $subaccent
+            width: 100%
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 567px
+                height: 2px
+                background-color: $subaccent
+                opacity: .7
+                z-index: 5
+        p
+            &.subcaption
+                font-family: $semibold
+                font-size: 14px
+                letter-spacing: 1.4px
+                color: $subaccent
+                + p
+                    font-size: 12px
+                    letter-spacing: -.3px
+                    color: $text
+        &.left
+            height: 494px
+        &.right
+            text-align: right
+            height: 423px
+            margin-right: 16%
+            h2
+                &::before
+                    left: auto
+                    right: 0
+    .float-image
+        position: relative
+        &.right
+            img
+               height: 578px
+        &.left
+            z-index: 1
+            transform: translateX(151px)
+            img
+                height: 546px
+        a
+            font-family: $semibold
+            position: absolute
+            top: 0
+            right: 0
+            background-image: radial-gradient(182px 182px at 1196.2% 976.56%, #ffbcbc 0%, #f57979 100%)
+            font-size: 14px
+            letter-spacing: 2px
+            text-transform: uppercase
+            padding: 30px 40px
+            opacity: .9
+            color: #fff
+            
+// SIX SECTION
+
+.partners
+    padding-bottom: 97px
+    .top-caption
+        h2
+            font-family: "PlayfairDisplay Bold", sans-serif
+            font-size: 30px
+            letter-spacing: 1.5px  
+            color: $caption
+        p
+            font-family: $semibold, sans-serif
+            font-size: 16px
+            letter-spacing: 1.6px
+            color: $subaccent
+    .wrapper
+        max-width: 1288px
+        margin: 0 auto
+    &__slider
+        .image
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            width: 188px
+            height: 188px
+    .progress-bar
+        position: relative
+        width: 75%
+        height: 2px
+        background-color: $subaccent
+        margin: 0 auto
+        .progress-line
+            position: absolute
+            left: 0
+            bottom: 0
+            background-color: #f57979
+            height: 5px
+            width: 0%
+            transition: width .4s ease-in-out
+            
+// SEVEN SECTION
+
+.model
+    padding-bottom: 107px
+    &__preview
+        height: 768px
+        margin-bottom: 125px
+    &__button
+        background-color: $accent
+        font-family: $bold
+        font-size: 12px
+        letter-spacing: 1.68px
+        text-transform: uppercase
+        padding: 18px 60px
+        border-radius: 25px
+        margin: 30px auto 0 auto
+        color: #fff
+        &:hover
+            color: #fff
+    > .container-fluid
+        padding: 0 334px
+    .top-caption
+        margin-bottom: 35px
+        h2
+            font-family: "PlayfairDisplay Bold", sans-serif
+            font-size: 30px
+            letter-spacing: 1.5px  
+            color: $caption
+        p
+            font-family: $semibold, sans-serif
+            font-size: 16px
+            letter-spacing: 1.6px
+            margin-bottom: 0
+            color: $subaccent
+    .bottom-description
+        p
+            font-size: 14px
+            color: $text
+            
+// FOOTER
+
+footer
+    position: relative
+    background-color: $subaccent
+    padding: 50px 35px 30px 35px
+    .btn-top
+        position: absolute
+        top: -19px
+        left: 50%
+        transform: translateX(-50%);
+        background-color: #fff
+        border-radius: 50%
+        padding: 10px 14px
+        border: 2px solid $subaccent
+        img
+            vertical-align: baseline
+    ul
+        padding: 0
+        margin: 0
+        list-style: none
+        li
+            display: inline-block
+            margin-right: 37px
+            &:last-child
+                margin-right: 0
+            span
+                font-family: $bold
+                color: #fff
+            a
+                font-family: $default-font
+                color: #fff
+                &:hover
+                    color: #fff
+    .copyright
+        color: #fff
+        
+@import "media" // Always at the end
