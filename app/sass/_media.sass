@@ -1,6 +1,458 @@
 @import 'vars'
 
+@media screen and (max-width: 1600px)
+    .housing
+        padding-left: 12vw
+        padding-right: 12vw
+    .us-progress
+        padding-left: 12vw
+        padding-right: 12vw
+        
+    .model
+        >.container-fluid
+            padding: 0 250px
+            
+@media screen and (max-width: 1440px)
+    .home 
+        header 
+            nav 
+                ul 
+                    li
+                        margin-right: 50px
+        .description
+            width: 75%
+        
+        
+    .housing 
+        .description-list
+            margin-left: 50px
+            
+    .our-company 
+        .content
+            width: 90%
+            
+            
+    .us-progress 
+        .description-area
+            &.right
+                margin-right: 7%
+                
+    .partners 
+        .wrapper
+             max-width: 75%
+        &__slider 
+            .image
+                width: 140px
+                height: 140px
+                
+    .model
+        >.container-fluid
+            padding: 0 180px
+            
+@media screen and (max-width: 1366px)
+    .home
+        header
+            padding: 0 30px
+            nav
+                ul
+                    li
+                        margin-right: 40px
+                        a
+                            font-size: 11px
+        .description
+            width: 90%
+            h1
+                font-size: 36px
+                
+                
+    .housing 
+        padding-left: 3vw
+        padding-right: 3vw
+        
+    .us-progress 
+        padding-left: 0
+        padding-right: 3vw
+        
+        
+    .model
+        >.container-fluid
+            padding: 0 130px
+
 +media-breakpoint-down(lg)
+    .home
+        .description
+            h1
+                font-size: 32px
+            a
+                padding: 17px 32px
+    
+    .housing 
+        .description-list
+            margin-left: 0
+        &::before
+            width: 450px
+            height: 90px
+            bottom: -90px
+        
+    .our-company 
+        .content 
+            .info-area 
+                h4
+                    font-size: 24px
+                p
+                    &.subcaption
+                        font-size: 13px
+                        
+    .us-progress 
+        .float-image
+            &.right, 
+            &.left, 
+                img
+                    height: 470px
+        .description-area
+            &.left
+                height: 388px
+                margin-left: 20%
+                
+    
+    .partners 
+        .wrapper
+             max-width: 80%
+        &__slider 
+            .image
+                width: 150px
+                height: 150px
+                
+                
+    .model
+        >.container-fluid
+            padding: 0 30px
+        &__preview
+             height: 500px   
+                
 +media-breakpoint-down(md)
+    .home 
+        header 
+            nav
+                display: none
+            .hamburger
+                display: block!important
+            .logo
+                margin-top: 15px
+                
+    .more
+        &__left 
+            h2
+                font-size: 26px
+            p
+                font-size: 14px
+        &__right
+            p
+                font-size: 13px
+            ul
+                li
+                    font-size: 13px
+                
+    
+    .housing
+        .row
+            > div
+                &:first-child
+                    border-bottom: 1px solid $subaccent
+                    padding-bottom: 60px!important
+        .float-image
+            &.right
+                transform: unset
+                width: unset
+                img
+                    width: 100%
+                    max-width: 100%
+                    height: auto
+            &.left
+                margin-bottom: 60px
+                img
+                    height: auto
+        .description-list
+            max-width: 100%
+        .description-container
+            height: auto
+            margin: 30px 0
+            margin-top: 60px
+            
+    .our-company 
+        padding-top: 150px
+        padding-bottom: 150px
+        height: auto
+        .content
+            position: static
+            transform: unset
+            width: 80%
+            margin: 0 auto
+            .info-area
+                width: 70%
+                margin: 0 auto
+                h4
+                    text-align: center
+                    &::before
+                        left: 50%
+                        transform: translate(-50%)
+                        width: 20%
+                p
+                    text-align: center
+                    max-width: unset
+            .bottom
+                a
+                    &::after,
+                    &::before
+                        width: 80px
+                    &::after
+                        right: -50%
+                    &::before
+                        left: -50%
+                    
+    .us-progress
+        padding: 150px 3vw
+        padding-top: 70px
+        .description-area
+            &.left
+                height: auto
+                margin-left: 0
+            &.right
+                margin-right: 0
+                height: auto
+            h2
+                text-align: center
+                &::before
+                    width: 100%
+            p
+                text-align: center
+            
+        .float-image
+            &.left,
+            &.right
+                img
+                    width: 100%
+                    height: auto
+            &.left
+                transform: unset
+                
+    .partners
+        &__slider 
+            .image
+               margin: 0 auto
+            
+            
+    .model
+        .bottom-description 
+            p
+                text-align: center
+        &__preview
+            margin-bottom: 50px
+            
+            
+    footer 
+        ul 
+            li
+                margin-right: 15px
+            
+            
 +media-breakpoint-down(sm)
+    .home 
+        header 
+            padding: 0 15px
+            .logo
+                margin-top: 15px
+        .description
+                width: 100%
+                h1
+                    font-size: 30px
+                a
+                    padding: 16px 25px
+                    font-size: 11px
+    .more
+        &__left 
+            h2
+                text-align: center
+            p
+                text-align: center
+                
+                
+    .housing
+        &::before
+            width: 310px
+            height: 70px
+            bottom: -70px
+        
+    .our-company 
+        .content
+            .info-area
+                width: 75%
+            .bottom
+                a
+                    &::after,
+                    &::before
+                        width: 50px
+                    &::after
+                        right: -30%
+                    &::before
+                        left: -30%
+                    
+    footer 
+        ul 
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            justify-content: center
+    
 +media-breakpoint-down(xs)
+    .home
+        header
+            padding: 0
+        .description
+            max-width: 80%
+            h1
+                font-size: 21px
+            a
+                font-size: 10px
+                padding: 15px 17px
+        .logo
+            img
+                width: 80%
+                float: right
+                
+    .more
+        &__left 
+            h2
+                font-size: 21px
+            p
+                font-size: 12px
+        &__right
+            p
+                font-size: 12px
+            ul
+                li
+                    font-size: 12px
+                    
+    .housing
+        &::before
+            width: 150px
+            height: 50px
+            bottom: -50px
+        .description-container 
+            div 
+                h2
+                    font-size: 18px
+                p
+                    font-size: 12px
+        .float-image 
+            a
+                padding: 42px 20px
+                transform: translateX(-40px)
+        .chance
+            font-size: 12px
+                
+    .our-company
+        padding-bottom: 150px
+        .content
+            width: 100%
+            padding-left: 15px
+            padding-right: 15px
+            .top-caption 
+                h2
+                    font-size: 18px
+                p
+                    font-size: 12px
+            .info-area
+                width: 80%
+                h4
+                    font-size: 18px
+                p
+                    &.subcaption
+                        font-size: 12px
+                        line-height: 19px
+            .bottom 
+                a
+                    padding: 15px 35px
+                    &::before,
+                    &::after
+                        width: 20px
+                    &::after
+                        right: -20%
+                    &::before
+                        left: -20%
+                    
+    .us-progress 
+        .top-caption 
+            h2
+                font-size: 18px
+            p
+                font-size: 12px
+        .description-area 
+            &.right
+                h2
+                    &::before
+                        right: auto
+                        left: 50%
+            h2
+                font-size: 24px
+                &::before
+                    width: 70%
+                    left: 50%
+                    transform: translate(-50%)
+            p
+                &.subcaption
+                    font-size: 12px
+                    
+                    
+    .partners
+        .top-caption 
+            h2
+                font-size: 18px
+            p
+                font-size: 12px
+        &__slider 
+            .image
+               width: 160px
+               height: 160px
+        .progress-bar
+            width: 100%
+            
+            
+    .model
+        >.container-fluid
+            padding: 0 15px
+        .top-caption 
+            h2
+                font-size: 18px
+            p
+                font-size: 12px
+        &__button
+            padding: 15px 35px
+        &__preview
+            height: 300px
+            
+    footer 
+        padding-left: 15px
+        padding-right: 15px
+        
+    .modal-form
+        width: 95%
+        padding-left: 25px
+        padding-right: 25px
+        .modal-contents 
+            h2
+                font-size: 18px
+                + p
+                    font-size: 12px
+    .popup-menu
+        width: 100%
+        
+@media screen and (max-width: 375px)
+    footer 
+        ul 
+            li
+                font-size: 14px
+        .copyright
+            font-size: 14px
